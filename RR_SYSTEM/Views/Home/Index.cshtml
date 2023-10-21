@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <div style="display: none;" id="mensajeParaConsola">@ViewBag.Mensaje</div>
+
+    <!-- Agrega un script JavaScript para imprimir el mensaje en la consola -->
+    <script>
+        // Obtiene el mensaje desde el elemento HTML oculto
+        var mensaje = document.getElementById("mensajeParaConsola").textContent;
+        
+        // Imprime el mensaje en la consola del navegador
+        console.log(mensaje);
+    </script>
+</div>

@@ -1,0 +1,144 @@
+﻿@model IEnumerable<RR_SYSTEM.Models.Empleado>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Celular)
+            </th>
+@*             <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumDeCuenta)
+            </th>
+@*             <th>
+                @Html.DisplayNameFor(model => model.FechaCreacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreadoPorNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdContratoFkNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEstadoFkNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdMunicipioFkNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdNacionalidadFkNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPuestoFkNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifcadoPorNavigation)
+            </th> *@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Celular)
+            </td>
+@*             <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumDeCuenta)
+            </td>
+  @*          <td>
+                @Html.DisplayFor(modelItem => item.FechaCreacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreadoPorNavigation.IdUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdContratoFkNavigation.IdContrato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEstadoFkNavigation.IdEstado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdMunicipioFkNavigation.IdMunicipio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdNacionalidadFkNavigation.IdNacionalidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPuestoFkNavigation.IdPuesto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifcadoPorNavigation.IdUsuario)
+            </td> *@
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdEmpleado" class="btn btn-primary">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdEmpleado" class="btn btn-info">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdEmpleado" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
